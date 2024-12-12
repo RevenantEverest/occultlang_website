@@ -1,22 +1,23 @@
 {
     "compilerOptions": {
         /* Path Aliasing */
-        "baseUrl":"./src",
+        "baseUrl":".",
         "paths": {
-            "@@assets/*": ["./assets/*"],
-            "@@components/*": ["./components/*"],
-            "@@containers/*": ["./containers/*"],
-            "@@navigation/*": ["./navigation/*"],
-            "@@pages/*": ["./pages/*"],
-            "@@store/*": ["./store/*"],
-            "@@types/*": ["./types/*"],
+            "@/*": ["./src/*"],
+            "@@assets/*": ["./src/assets/*"],
+            "@@components/*": ["./src/components/*"],
+            "@@containers/*": ["./src/containers/*"],
+            "@@navigation/*": ["./src/navigation/*"],
+            "@@pages/*": ["./src/pages/*"],
+            "@@store/*": ["./src/store/*"],
+            "@@types/*": ["./src/types/*"],
             
             /* Index specific aliases */
-            "@@constants":["./constants/index.ts"],
-            "@@hooks": ["./hooks/index.tsx"],
-            "@@services": ["./services/index.ts"],
-            "@@theme": ["./theme/index.ts"],
-            "@@utils": ["./utils/index.ts"]
+            "@@constants":["./src/constants/index.ts"],
+            "@@hooks": ["./src/hooks/index.tsx"],
+            "@@services": ["./src/services/index.ts"],
+            "@@theme": ["./src/theme/index.ts"],
+            "@@utils": ["./src/utils/index.ts"]
         }
     }
 }
