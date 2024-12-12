@@ -39,7 +39,7 @@ const GitHubStars = ({ owner, repo }: GithubStarsProps) => {
         <TooltipProvider delayDuration={0}>
         <Tooltip>
             <TooltipTrigger>
-                <div className="flex items-center gap-1 hover:bg-primary/50 hover:cursor-pointer py-2 px-2 rounded-md">
+                <div className="flex items-center gap-1 hover:bg-secondary/10 hover:cursor-pointer py-2 px-2 rounded-md">
                     <FaGithub className="text-2xl" />
                     <p className="font-semibold text-md -mt-.5">{stars.toLocaleString()}</p>
                 </div>
