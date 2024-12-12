@@ -43,7 +43,7 @@ function ThemeIcon({ theme, currentTheme, onClick }: ThemeIconProps) {
                     </div>
                 </TooltipTrigger>
                 <TooltipContent>
-                    <p>{generateDisplayName()}</p>
+                    <p className="font-semibold">{generateDisplayName()}</p>
                 </TooltipContent>
             </Tooltip>
         </TooltipProvider>
