@@ -5,12 +5,12 @@ import type { Theme, ThemeColors } from '@@types/theme';
 const colors: ThemeColors = {
     primary: "#eb6f92",
     secondary: "#c4a7e7",
-    accent: "#ea9a97",
-    background: "#2a273f",
+    accent: "#9ccfd8",
+    background: "#232136",
     card: "#393552",
     text: "#e0def4",
-    muted: "#6e6a86",
-    accentText: "#ea9a97"
+    muted: "#908caa",
+    accentText: "#9ccfd8"
 };
 
 const theme: Theme = {
