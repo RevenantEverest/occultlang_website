@@ -11,6 +11,7 @@
     "reset:npm": "rm -rf node_modules/ && bun install"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.4",
     "@tailwindcss/vite": "^4.0.0-beta.6",
     "@tanstack/react-router": "^1.87.7",
