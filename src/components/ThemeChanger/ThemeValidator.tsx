@@ -11,7 +11,6 @@ function ThemeValidator() {
     }, [theme])
     
     useEffect(() => {
-        console.log("Inside ThemeValidator", theme);
         validateTheme();
     }, [validateTheme, theme]);
 
