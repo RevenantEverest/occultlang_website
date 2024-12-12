@@ -8,4 +8,5 @@ export { default as OccultLogo } from './SVG/OccultLogo';
 export { default as Layout } from './Layout';
 
 /* Effects / Other */
+export { default as GithubStars } from './GithubStars';
 export { default as Matrix } from './Matrix';
