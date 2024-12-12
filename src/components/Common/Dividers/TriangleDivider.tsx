@@ -1,18 +1,24 @@
-function TriangleDivider() {
+import React from "react";
+
+interface TriangleDividerProps extends React.HTMLAttributes<HTMLDivElement> {
+    fill?: string
+};
+
+function TriangleDivider({ className, fill="#ffffff" }: TriangleDividerProps) {
 
     return(
         <div 
-            className="absolute bottom-0 left-0 leading-0 overflow-hidden w-full"
+            className={`w-full overflow-hidden leading-0 bottom-0 ${className}`}
             style={{ 
                 transform: "rotate(180deg)"
             }}
         >
             <svg
-                className="relative block h-[150px]"
+                className="relative block h-[150px] w-full"
                 style={{
                     transform: "calc(100% + 1.3px)"
                 }}
-                fill="#00ff00"
+                fill={fill}
                 data-name="Layer 1" 
                 xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 1200 120" 
