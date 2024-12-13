@@ -24,7 +24,7 @@ function Features() {
     const featureList: Feature[] = [
         { 
             title: "Speed", 
-            subtitle: <p>On par with <span className="text-accent">C</span> with speed</p>, 
+            subtitle: <p>On par with <span className="text-accent">C</span></p>, 
             icon: MdOutlineShutterSpeed
         },
         { 
