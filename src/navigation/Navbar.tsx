@@ -72,7 +72,7 @@ function Navbar() {
                         <OccultLogo height={40} width={40} fill={theme.colors.primary} />
                         <h1 className="font-bold text-lg">Occultlang</h1>
                         <div className="bg-primary px-2 py-.5 rounded-md mt-1">
-                            <p className="text-sm font-semibold">v1.0.0</p>
+                            <p className="text-sm font-semibold">v2.0.0-alpha</p>
                         </div>
                     </Link>
                     <div className="flex-1 hidden md:flex items-center justify-center">
