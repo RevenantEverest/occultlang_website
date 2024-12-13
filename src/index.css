@@ -1,5 +1,6 @@
-@import "tailwindcss";
 @import "https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap";
+
+@import "tailwindcss";
 
 @theme {
 
@@ -11,6 +12,7 @@
   --color-muted: var(--color-muted);
   --color-text-accent: var(--color-text-accent);
   --color-card: var(--color-card);
+  --color-card-light: var(--color-card-light);
   --color-background: var(--background)
   /* END Custom Variables */
 
