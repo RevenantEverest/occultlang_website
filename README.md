@@ -7,9 +7,8 @@
 <p align="center"><strong>Website for the Occultlang programming language built with <a href="https://vite.dev/">Vite / React</a></strong></p>
 
 <p align="center">
-    <img src="https://img.shields.io/github/actions/workflow/status/RevenantEverest/Stefischer/jest.yml?style=flat&logo=github&label=Tests"></img>
-    <img src="https://img.shields.io/github/actions/workflow/status/RevenantEverest/Stefischer/eslint.yml?style=flat&logo=github&label=ESLint"></img>
-    <img src="https://img.shields.io/github/stars/RevenantEverest/Stefischer?style=social"></img>
+    <img src="https://img.shields.io/github/actions/workflow/status/RevenantEverest/occultlang_website/eslint.yml?style=flat&logo=github&label=ESLint"></img>
+    <img src="https://img.shields.io/github/stars/RevenantEverest/occultlang_website?style=social"></img>
 </p>
 
 <p align="center">
