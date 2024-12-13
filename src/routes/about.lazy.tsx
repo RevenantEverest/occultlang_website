@@ -8,7 +8,7 @@ export const Route = createLazyFileRoute('/about')({
 
 function About() {
     return(
-        <Layout className="items-center justify-center">
+        <Layout className="items-center justify-center min-h-[93.2dvh]">
         </Layout>
     );
 };
