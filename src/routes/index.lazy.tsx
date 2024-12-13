@@ -19,7 +19,7 @@ function Index() {
 
     return (
         <React.Fragment>
-            <div className="bg-[#2a273f]">
+            <div className="bg-card-light">
                 <div className="flex justify-center h-[75dvh]">
                     <div className="flex flex-col md:flex-row gap-6 md:gap-2 items-center justify-center -mb-20 md:mb-0">
                         <motion.div
