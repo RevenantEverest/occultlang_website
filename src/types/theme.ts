@@ -8,7 +8,8 @@ export interface ThemeColors {
     muted: string,
     accentText: string,
 
-    card: string
+    card: string,
+    cardLight: string
 };
 
 export type MappedThemeKeys = (
@@ -21,6 +22,7 @@ export type MappedThemeKeys = (
     "--color-text-accent" |
 
     "--color-card" |
+    "--color-card-light" |
 
     "--background"
 ); 

@@ -8,6 +8,7 @@ const colors: ThemeColors = {
     accent: "#9ccfd8",
     background: "#232136",
     card: "#393552",
+    cardLight: "#2a273f",
     text: "#e0def4",
     muted: "#908caa",
     accentText: "#9ccfd8"

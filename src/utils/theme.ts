@@ -26,6 +26,7 @@ export function mapTheme(colors: ThemeColors): MappedTheme {
         "--color-text-accent": colors.accentText,
         
         "--color-card": colors.card,
+        "--color-card-light": colors.cardLight,
 
         "--background": colors.background,
     };
