@@ -7,8 +7,8 @@
 <p align="center"><strong>Website for the Occultlang programming language built with <a href="https://vite.dev/">Vite / React</a></strong></p>
 
 <p align="center">
-    <img src="https://img.shields.io/github/actions/workflow/status/RevenantEverest/occultlang_website/eslint.yml?style=flat&logo=github&label=ESLint"></img>
-    <img src="https://img.shields.io/github/stars/RevenantEverest/occultlang_website?style=social"></img>
+    <img src="https://img.shields.io/github/actions/workflow/status/occultlang/occultlang_website/eslint.yml?style=flat&logo=github&label=ESLint"></img>
+    <img src="https://img.shields.io/github/stars/occultlang/occultlang_website?style=social"></img>
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://raw.githubusercontent.com/RevenantEverest/occultlang_website/master/src/assets/homepage.jpg)
+![screenshot](https://raw.githubusercontent.com/occultlang/occultlang_website/master/src/assets/homepage.jpg)
 
 ### How To Run
 
