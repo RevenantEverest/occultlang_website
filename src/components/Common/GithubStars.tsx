@@ -3,6 +3,8 @@ import { FaGithub } from 'react-icons/fa';
 
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from '@@components/ui/tooltip';
 
+import { URLS } from '@@constants';
+
 interface GithubStarsProps {
     owner: string,
     repo: string
@@ -27,7 +29,7 @@ const GitHubStars = ({ owner, repo }: GithubStarsProps) => {
 
                 const data: { stargazers_count: number } = await response.json();
                 setStars(data.stargazers_count);
-            } catch (err: any) {
+            } catch (err: unknown) {
                 console.error(err || 'Failed to fetch data');
             }
         };
@@ -39,10 +41,12 @@ const GitHubStars = ({ owner, repo }: GithubStarsProps) => {
         <TooltipProvider delayDuration={0}>
         <Tooltip>
             <TooltipTrigger>
-                <div className="flex items-center gap-1 hover:bg-secondary/10 hover:cursor-pointer py-2 px-2 rounded-md">
-                    <FaGithub className="text-2xl" />
-                    <p className="font-semibold text-md -mt-.5">{stars.toLocaleString()}</p>
-                </div>
+                <a href={URLS.GITHUB_REPO} target="_blank" rel="noopener noreferrer">
+                    <div className="flex items-center gap-1 hover:bg-secondary/10 hover:cursor-pointer py-2 px-2 rounded-md">
+                        <FaGithub className="text-2xl" />
+                        <p className="font-semibold text-md -mt-.5">{stars.toLocaleString()}</p>
+                    </div>
+                </a>
             </TooltipTrigger>
             <TooltipContent>
                 <p>Github Stars</p>
