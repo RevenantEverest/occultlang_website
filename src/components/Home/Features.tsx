@@ -24,12 +24,12 @@ function Features() {
     const featureList: Feature[] = [
         { 
             title: "Speed", 
-            subtitle: <p>On par with <span className="text-accent">C</span></p>, 
+            subtitle: <p>We aim to be on par with <span className="text-accent">C</span></p>, 
             icon: MdOutlineShutterSpeed
         },
         { 
             title: "Memory Management", 
-            subtitle: <p>Memory safe like <span className="text-accent">Rust</span></p>, 
+            subtitle: <p>Our goal is to achieve memory safety similar to <span className="text-accent">Rust</span></p>, 
             icon: FaMemory 
         },
         { 
@@ -57,7 +57,7 @@ function Features() {
                         initial={{ opacity: 0, y: "15vh" }}
                         whileInView={{ opacity: 1, y: 0, transition: { delay: index * 0.2 } }}
                     >
-                        <Card className="w-full">
+                        <Card className="w-full h-60">
                             <CardHeader>
                                 <CardTitle className="flex flex-col justify-center items-center text-2xl md:text-3xl">
                                     <Icon className="text-primary text-5xl md:text-6xl mb-2 md:mb-4" />
