@@ -1,9 +1,12 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { useRouter, Link } from '@tanstack/react-router';
 
 import { useThemeStore } from '@@store/theme';
 
 import ThemeChanger from '@@components/ThemeChanger/ThemeChanger';
+
+import { URLS } from '@@constants';
 
 interface MobileNavbarProps {
     isOpen: boolean,
@@ -25,7 +28,7 @@ function MobileNavbar({ isOpen, setIsOpen }: MobileNavbarProps) {
     };
 
     const renderRoutes = () => {
-        return Object.keys(router.routesByPath).map((key, index) => {
+        const InternalRoutes = Object.keys(router.routesByPath).map((key, index) => {
             const title = key.split("/")[1];
 
             return(
@@ -48,6 +51,21 @@ function MobileNavbar({ isOpen, setIsOpen }: MobileNavbarProps) {
                 </div>
             );
         });
+
+        return(
+            <React.Fragment>
+                {InternalRoutes}
+
+                <div className="py-4">
+                    <a 
+                        href={URLS.DOCUMENTATION_SITE} target="_blank" rel="noopener noreferrer"
+                        className="hover:bg-secondary/10 hover:cursor-pointer w-20 rounded-md text-lg"
+                    >
+                        <p className="font-semibold">Docs</p>
+                    </a>
+                </div>
+            </React.Fragment>
+        );
     };
 
     return(

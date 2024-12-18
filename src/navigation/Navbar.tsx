@@ -1,13 +1,16 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter, Link } from '@tanstack/react-router';
 import { AnimatePresence, motion } from 'motion/react';
 
 import { useThemeStore } from '@@store/theme';
+import { useScrollPosition } from '@@hooks';
 
 import { FaBars } from 'react-icons/fa6';
 import { GithubStars, OccultLogo } from '@@components/Common';
 import ThemeChanger from '@@components/ThemeChanger/ThemeChanger';
 import MobileNavbar from './MobileNavbar';
+
+import { URLS } from '@@constants';
 
 function Navbar() {
 
@@ -15,15 +18,42 @@ function Navbar() {
     const theme = useThemeStore((state) => state.theme);
     const setTheme = useThemeStore((state) => state.setTheme);
 
+    const scrollPosition = useScrollPosition();
     const [solidBackground, setSolidBackground] = useState(false);
     const [isMobileOpen, setIsMobileOpen] = useState(false);
+
+    useEffect(() => {
+        const solidPos = {
+            home: 550,
+            other: 400
+        };
+
+        if(location.pathname === "/") {
+            if(scrollPosition > solidPos.home) {
+                setSolidBackground(true);
+            }
+
+            if(scrollPosition < solidPos.home) {
+                setSolidBackground(false);
+            }
+        }
+        else {
+            if(scrollPosition > solidPos.other) {
+                setSolidBackground(true);
+            }
+
+            if(scrollPosition < solidPos.other) {
+                setSolidBackground(false);
+            }
+        }
+    }, [scrollPosition, location]);
 
     useEffect(() => {
         setSolidBackground(isMobileOpen);
     }, [isMobileOpen]);
 
     const renderRoutes = () => {
-        return Object.keys(router.routesByPath).map((key, index) => {
+        const InternalRoutes = Object.keys(router.routesByPath).map((key, index) => {
             const title = key.split("/")[1];
 
             return(
@@ -41,6 +71,18 @@ function Navbar() {
                 </Link>
             );
         });
+
+        return(
+            <React.Fragment>
+                {InternalRoutes}
+                <a 
+                    href={URLS.DOCUMENTATION_SITE} target="_blank" rel="noopener noreferrer"
+                    className="hover:bg-secondary/10 hover:cursor-pointer w-20 rounded-md text-center py-1"
+                >
+                    <p className="font-semibold">Docs</p>
+                </a>
+            </React.Fragment>
+        );
     };
 
     return(
@@ -82,7 +124,7 @@ function Navbar() {
                         <ThemeChanger theme={theme} setTheme={setTheme} />
                         <GithubStars owner="occultlang" repo="occult" />
                     </div>
-                    <div className="flex-1 flex items-center justify-end md:hidden">
+                    <div className="flex items-center justify-end md:hidden">
                         <div className="ml-4 mr-4 flex md:hidden justify-center content-center items-center" onClick={() => setIsMobileOpen(!isMobileOpen)}>
                             <FaBars className="text-2xl text-text" />
                         </div>
